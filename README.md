@@ -1,9 +1,12 @@
-# IndeedClone - ASP.NET MVC Project
+# IndeedClone - ASP.NET MVC Project  (HMVC)
 
 IndeedClone is a job portal web application inspired by Indeed.  
 It allows recruiters to post jobs and candidates to browse and apply for jobs.
 
 ## Folder Structure
+
+
+```text
 .
 └── IndeedClone
     ├── Emails
@@ -17,9 +20,31 @@ It allows recruiters to post jobs and candidates to browse and apply for jobs.
     │       ├── JobApplication # Job seeker module (CV upload, experience, screening questions)
     │       └── JobPost        # Employer job posting workflow
     │
-    ├── Storage                # Stores uploaded user files (resumes, etc.)
+    ├── Storage                # Stores uploaded user files (resumes)
     │
     └── ThirdParty             # Custom helper libraries
+```
+
+### Note on Modules (HMVC Architecture)
+
+This project follows a modular HMVC architecture.  
+Each folder inside the `Modules` directory is a self-contained module.
+
+Every module typically includes its own:
+
+- Controllers
+- Models
+- DTOs
+- Enums
+- Helpers
+- ServiceContracts
+- Services
+- RepoContracts
+- Repositories
+- Views
+
+This structure keeps modules independent and improves maintainability and scalability.
+Some folders may contain some extra folder based on the pipeline workflow and behaviour.
 
 ## Tech Stack
 
