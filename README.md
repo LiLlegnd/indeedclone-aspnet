@@ -12,7 +12,8 @@ The project is built using **ASP.NET Core MVC with a modular HMVC architecture**
 # Key Highlights
 
 * Modular **HMVC architecture**
-* Hybrid data access strategy (**Entity Framework Core + ADO.NET**)
+* Hybrid data access strategy **Entity Framework Core** for transactional operations and ADO.NET for optimized job search queries.
+* Authentication flows including email/password login, **Google OAuth sign-in**, **email OTPverification**, and secure password reset workflow
 * Multi-step recruiter **job posting workflow**
 * **Transaction-based job activation system**
 * **AJAX-powered UI interactions**
