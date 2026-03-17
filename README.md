@@ -24,6 +24,7 @@ The project is built using **ASP.NET Core MVC with a modular HMVC architecture**
 ---
 
 # Screenshots
+
 ## **Home Page**
 
 
@@ -32,7 +33,7 @@ The project is built using **ASP.NET Core MVC with a modular HMVC architecture**
 ![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/2d432602f38b8f8527890860e48054041b211e02/Screenshot%20(199).png)
 
 
-## **Login Page**
+## **Login Firts Page**
 
 
 ![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(196).png)
@@ -51,13 +52,13 @@ The project is built using **ASP.NET Core MVC with a modular HMVC architecture**
 ![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(206).png)
 
 
-## **Dashboard Page**
+## **Dashboard Firt Page**
 
 
 ![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(198).png)
 
 
-## **Apply First Page**
+## **Job Apply First Page**
 
 
 ![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(202).png)
